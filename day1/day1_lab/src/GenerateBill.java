@@ -10,18 +10,46 @@ class GenerateBill{
 		int totalBill = 0;
 		boolean selectMore = true;
 		int choice = 0;
+		int qty = 0;
 		while(selectMore){
 			System.out.printf("Menu\n1. Dosa : $20		2. Samosa : $40\n3. Idli : $80		4. Water : $100\n5. Exit\n");
 			choice = sc.nextInt();
+			qty = 0;
 			switch (choice){
-			case 1: System.out.println("Added Dosa");
-					totalBill+=20;break;
-			case 2: System.out.println("Added Samosa");
-					totalBill+=40; break;
-			case 3: System.out.println("Added Idli");
-					totalBill+=80; break;
-			case 4: System.out.println("Added Water");
-					totalBill+=100; break;
+			case 1: 
+					System.out.print("Enter Quantity Dosa : ");
+					qty = sc.nextInt();
+					qty = qty*20;
+					System.out.println("Added Dosa");
+					totalBill+=qty;
+					System.out.println("Amount of Dosa : "+ qty);
+					break;
+			case 2: 
+					System.out.print("Enter Quantity Samosa : ");
+					qty = sc.nextInt();
+					qty = qty*40;
+					System.out.println("Added Samosa");
+					System.out.println("Amount of Samosa : "+ qty);
+					totalBill+=qty; break;
+
+			case 3: 
+					System.out.print("Enter Quantity Idli : ");
+					qty = sc.nextInt();
+					qty = qty*80;
+					System.out.println("Added Idli");
+					System.out.println("Amount of Idli : "+ qty);
+
+					totalBill+=qty; break;
+
+			case 4: 
+					System.out.print("Enter Quantity Water : ");
+					qty = sc.nextInt();
+					qty = qty*100;
+					System.out.println("Added Water");
+					System.out.println("Amount of Water : "+ qty);
+
+					totalBill+=qty; break;
+
 			case 5: selectMore = false; break;
 			default : System.out.println("Invalid Choice"); break;
 			}
