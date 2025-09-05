@@ -172,7 +172,7 @@ Byte range : -2^7 --- 2^7-1 (-128  127)
 class type , array type , interface type
 
 Pointers vs java references
- Pointer arithmatic is not allowed in java.
+ Pointer arithmetic is not allowed in java.
 reference --- holds internal representation of address (equivalent to object pointer in c++)
 
 Conversions regarding primitive types

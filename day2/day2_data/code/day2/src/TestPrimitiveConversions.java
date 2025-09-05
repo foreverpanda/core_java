@@ -8,7 +8,7 @@ class TestPrimitiveConversions {
   byte b4=(byte)(b2+b3);
   b3 += 20;//b3=(byte)(b3+20);
   short s1=1234;
-  //short s2=b1+s1;javac err
+  short s2=b1+s1;//javac err
   long l1=12345678;
   float f1=l1;
   f1=1234.56f;//no javac err
